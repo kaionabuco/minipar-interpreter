@@ -58,8 +58,8 @@ class Lexer:
             id_str += self.current_char
             self.proximo_caractere()
         # Checar qual palavra reservada
-        if id_str in {'if', 'else', 'for', 'while'}:
-            return Token(TokenType.KEYWORD, id_str)
+        if id_str == 'if':
+            return Token(TokenType.IF, id_str)
         elif id_str == 'else':
             return Token(TokenType.ELSE, id_str)
         elif id_str == 'while':
